@@ -26,8 +26,16 @@ public class HelloController implements Initializable {
     private Button addName;
 
     public void addNameAction(){
+        String  newName = nameTextField.getText();
+        if(! newName.isEmpty()){
+            Person newPerson = new Person();
+            obsList.add(new Person(null, newName));
+            nameTextField.clear();
+            System.out.println("Nome adicionado:  " + newName);
 
-        System.out.printf("TESTANDO, PORRAAAAA");
+        }
+
+        //System.out.printf("TESTANDO, PORRAAAAA");
 
     }
 
