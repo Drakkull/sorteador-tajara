@@ -43,8 +43,12 @@ public class HelloController implements Initializable {
     private Button removeName;
 
     public void removeNameAction(){
-
-        System.out.println("Teste2");
+        Person selectedPerson = comboBoxPerson.getSelectionModel().getSelectedItem();
+        if(selectedPerson != null){
+            obsList.remove(selectedPerson);
+            System.out.println("Nome Removido: " + selectedPerson.getName() );
+        }
+        //System.out.println("Teste2");
     }
 
     @FXML
